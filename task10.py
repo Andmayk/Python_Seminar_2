@@ -4,13 +4,28 @@
 # Выведите минимальное количество монет, которые нужно перевернуть
 
 
-number_of_coins = int(input("Введите количество монет: "))
+n = int(input("Введите количество монет: "))
 
-print("Введите какой стороной лежат монеты:  0 - орел, 1 - решка ")
+print("Введите какой стороной вверх лежат монеты:  0 - орел, 1 - решка ")
 
-number_of_heads = 0
-number_of_tails = 0
+number_of_heads = 0  # количество монет орлом
+number_of_tails = 0  # количество монет решкой
 
-for i in range(number_of_coins):
-    coin = int(input(f"монета {i+1} орёл или решка (0/1): "))
+for i in range(n):
+    coin = int(input(f"Монета {i+1} - орёл или решка (0/1): "))
+    while coin < 0 or 1 < coin:
+        coin = int(input(f"Монета {i+1} - Введите!  0 - орёл или 1 - решка: "))
+    if coin == 0:
+        number_of_heads += 1
+    if coin == 1:
+        number_of_tails += 1
+
+if number_of_heads == 0 or number_of_tails == 0:
+    print("ничего не надо переворачивать все монеты лежат одной стороной вверх")
+elif number_of_heads > number_of_tails:
+    print(f"Количество монет которые необходимо перевернуть {number_of_tails} - лежат решкой вверх")
+elif number_of_heads < number_of_tails:
+    print(f"Количество монет которые необходимо перевернуть {number_of_heads} - лежат орлом вверх")
+else:
+    print(f"необходимо перевернуть половину монеты которые лежат или орлом или решкой вверх - их поравну по {number_of_heads}")
 

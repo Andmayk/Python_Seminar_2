@@ -24,6 +24,6 @@ if not solutions:
     # d = s**2 - 4 * p
     # x =(s-cmath.sqrt(d))/(2) 
     # y =(s+cmath.sqrt(d))/(2) 
-    # print(f"Вещественные числа {x} и {y}")
+    # print(f"подходящие числа {x} и {y}")
 
 

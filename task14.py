@@ -10,3 +10,4 @@ while s <= n:
     k += 1
     s = 2**k  
 print()
+

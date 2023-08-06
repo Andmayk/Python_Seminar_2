@@ -4,3 +4,17 @@
 # Он называет сумму этих чисел S и их произведение P. 
 # Помогите Кате отгадать задуманные Петей числа.
 
+s = int(input("Введите сумму двух чисел: "))
+p = int(input("Введите произведение двух чисел: "))
+
+no_solutions = True
+
+for x in range(1000):
+    for y in range(1000):
+        if ((x + y) == s) and ((x + y) == s):
+            print(f"Задуманные числа {x} и {y}")
+            no_solutions = False
+
+if no_solutions:
+    print("решений нет")
+

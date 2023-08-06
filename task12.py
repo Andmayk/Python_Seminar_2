@@ -25,3 +25,4 @@ if not solutions:
     # x =(s-cmath.sqrt(d))/(2) 
     # y =(s+cmath.sqrt(d))/(2) 
     # print(f"подходящие числа {x} и {y}")
+

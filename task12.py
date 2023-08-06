@@ -7,14 +7,23 @@
 s = int(input("Введите сумму двух чисел: "))
 p = int(input("Введите произведение двух чисел: "))
 
-no_solutions = True
+solutions = False
 
 for x in range(1000):
     for y in range(1000):
-        if ((x + y) == s) and ((x + y) == s):
+        if ((x + y) == s) and ((x * y) == p):
             print(f"Задуманные числа {x} и {y}")
-            no_solutions = False
+            solutions = True
+            break
+    if (solutions):
+        break
 
-if no_solutions:
-    print("решений нет")
+if not solutions:
+    print("В натуральных числах решений нет")
+    # import cmath 
+    # d = s**2 - 4 * p
+    # x =(s-cmath.sqrt(d))/(2) 
+    # y =(s+cmath.sqrt(d))/(2) 
+    # print(f"Вещественные числа {x} и {y}")
+
 

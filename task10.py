@@ -27,5 +27,5 @@ elif number_of_heads > number_of_tails:
 elif number_of_heads < number_of_tails:
     print(f"Количество монет которые необходимо перевернуть {number_of_heads} - лежат орлом вверх")
 else:
-    print(f"необходимо перевернуть половину монеты которые лежат или орлом или решкой вверх - их поравну по {number_of_heads}")
+    print(f"необходимо перевернуть половину всех монет которые лежат или орлом или решкой вверх - их поравну по {number_of_heads}")
 
